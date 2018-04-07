@@ -1,0 +1,59 @@
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<table id="customers">
+	<tr>
+	<th>CollID</th>
+	<th>Institution Code</th>
+	<th>Collection Code</th>
+	<th>Collection Name</th>
+	<th>Collection icon</th>
+	<th>accession</th>
+	<th>family</th>
+	<th>sciname</th>
+	<th>tid</th>
+	<th>author</th>
+	<th>collector</th>
+	<th>country</th>
+	<th>state</th>
+	<th>county</th>
+	<th>observer UID</th>
+	<th>Individual Count</th>
+	<th>Life Stage</th>
+	<th>Sex</th>
+	<th>Locality</th>
+	<th>Coll Number</th>
+	<th>Habitat</th>
+	<th>Date</th>
+	<th>Event Date</th>
+	<th>Elevation</th>
+	</tr>
+{% for key, value in return %}
+	<tr>
+    {% for k,v in value %}
+    		<td>{{v}}</td>
+    {% endfor %}
+	</tr>
+{% endfor %}
+</table>
