@@ -10,7 +10,7 @@ function symbiota_shortcode_function($attr, $content){
 		'id' => ''
 	), $attr));
 	?>
-	
+
 	<form name="harvestparams" id="harvestparams" action="../wp-content/plugins/symbiota/search.php" method="post" onsubmit="return checkHarvestparamsForm(this);">
 		<?php
 
@@ -266,7 +266,9 @@ function symbiota_shortcode_function($attr, $content){
 			<?php
 		}
 		?>
-
+	<script type="text/javascript" src="../symbiota/js/jquery.js"></script>
+	<script type="text/javascript" src="../symbiota/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../symbiota/js/symb/collections.harvestparams.js?ver=9"></script>
 		<script type="text/javascript">
 			var starrJson = '';
 
@@ -309,7 +311,7 @@ function symbiota_shortcode_function($attr, $content){
         }
         ?>
 
-        if(frm.upperlat.value != '' || frm.bottomlat.value != '' || frm.leftlong.value != '' || frm.rightlong.value != ''){
+        		if(frm.upperlat.value != '' || frm.bottomlat.value != '' || frm.leftlong.value != '' || frm.rightlong.value != ''){
                 // if Lat/Long field is filled in, they all should have a value!
                 if(frm.upperlat.value == '' || frm.bottomlat.value == '' || frm.leftlong.value == '' || frm.rightlong.value == ''){
                 	alert("Error: Please make all Lat/Long bounding box values contain a value or all are empty");
